@@ -1,0 +1,20 @@
+.custom-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.custom-indicator-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.custom-indicator-dot.active {
+  background-color: #000; /* warna saat aktif */
+  transform: scale(1.2);
+}
