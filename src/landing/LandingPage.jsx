@@ -7,7 +7,7 @@ const LandingPage = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        minHeight: "100vh",
+        minHeight: "80vh",
 
         // margin-top responsif: kecil di mobile, besar di desktop
         marginTop: "10vh",
@@ -16,7 +16,7 @@ const LandingPage = () => {
       <h1
         className="text-start"
         style={{
-          fontSize: "clamp(48px, 12vw, 154px)",
+          fontSize: "clamp(28px, 12vw, 120px)",
           lineHeight: "1",
           marginBottom: "0",
         }}
@@ -27,7 +27,7 @@ const LandingPage = () => {
       <h1
         className="text-start"
         style={{
-          fontSize: "clamp(48px, 12vw, 154px)",
+          fontSize: "clamp(28px, 12vw, 120px)",
           lineHeight: "1",
           marginBottom: "10px",
         }}

@@ -1,48 +1,115 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-const navigation = () => {
+export default function Navigation() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar
+      bg="dark"
+      variant="dark"
+      expand="lg"
+      style={{
+        position: "sticky",
+        top: "0",
+        zIndex: "999",
+      }}
+    >
       <Container>
-        <Navbar.Brand href="#">
+
+        {/* LOGO */}
+        <Navbar.Brand as={Link} to="/">
           <img
             src="/logo/briquette-logo.png"
-            width="80"
-            height="80"
+            width="50"
+            height="50"
             className="d-inline-block align-top"
             alt="Logo"
           />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbar-nav" />
-
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mx-auto">
-            {" "}
-            {/* Nav berada di tengah */}
-            <Nav.Link href="#home">Home</Nav.Link>
-            <NavDropdown title="About us" id="about-dropdown">
-              <NavDropdown.Item href="#action/3.1">
-                Visi & Misi
+
+            {/* HOME */}
+            <Nav.Link as={Link} to="/">
+              Home
+            </Nav.Link>
+
+            {/* ABOUT US */}
+            <NavDropdown title="About Us" id="about-dropdown">
+
+              {/* Scroll to About Section */}
+              <NavDropdown.Item
+                as={Link}
+                to="/landing/about/visi-misi#about"
+              >
+                About Company
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Our team</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Contact</NavDropdown.Item>
+
+              {/* Scroll to Vision */}
+              <NavDropdown.Item
+                as={Link}
+                to="/landing/about/visi-misi#visimisi"
+              >
+                Vision & Mission
+              </NavDropdown.Item>
+              {/* Scroll to Team */}
+              <NavDropdown.Item
+                as={Link}
+                to="/landing/about/visi-misi#ourteam"
+              >
+                Our Team
+              </NavDropdown.Item>
+
+              {/* Scroll to Contact */}
+              <NavDropdown.Item
+                as={Link}
+                to="/landing/about/visi-misi#contact"
+              >
+                Contact
+              </NavDropdown.Item>
+
             </NavDropdown>
+
+            {/* PRODUCT */}
             <NavDropdown title="Product" id="product-dropdown">
-              <NavDropdown.Item href="#action/3.1">
+
+              <NavDropdown.Item
+                as={Link}
+                to="/product#superiority"
+              >
                 Superiority
               </NavDropdown.Item>
+
+              <NavDropdown.Item
+                as={Link}
+                to="/product#quality"
+              >
+                Quality
+              </NavDropdown.Item>
+
+              <NavDropdown.Item
+                as={Link}
+                to="/product#export"
+              >
+                Export Grade
+              </NavDropdown.Item>
+
             </NavDropdown>
-            <Nav.Link href="#contact">Cooperation</Nav.Link>
+
+            {/* COOPERATION */}
+            <Nav.Link as={Link} to="/cooperation#partner">
+              Cooperation
+            </Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
+
       </Container>
     </Navbar>
   );
-};
-
-export default navigation;
+}
