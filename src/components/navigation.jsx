@@ -18,7 +18,6 @@ export default function Navigation() {
       }}
     >
       <Container>
-
         {/* LOGO */}
         <Navbar.Brand as={Link} to="/">
           <img
@@ -33,7 +32,6 @@ export default function Navigation() {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mx-auto">
-
             {/* HOME */}
             <Nav.Link as={Link} to="/">
               Home
@@ -41,12 +39,8 @@ export default function Navigation() {
 
             {/* ABOUT US */}
             <NavDropdown title="About Us" id="about-dropdown">
-
               {/* Scroll to About Section */}
-              <NavDropdown.Item
-                as={Link}
-                to="/landing/about/visi-misi#about"
-              >
+              <NavDropdown.Item as={Link} to="/landing/about/visi-misi#about">
                 About Company
               </NavDropdown.Item>
 
@@ -58,57 +52,31 @@ export default function Navigation() {
                 Vision & Mission
               </NavDropdown.Item>
               {/* Scroll to Team */}
-              <NavDropdown.Item
-                as={Link}
-                to="/landing/about/visi-misi#ourteam"
-              >
+              <NavDropdown.Item as={Link} to="/landing/about/visi-misi#ourteam">
                 Our Team
               </NavDropdown.Item>
 
               {/* Scroll to Contact */}
-              <NavDropdown.Item
-                as={Link}
-                to="/landing/about/visi-misi#contact"
-              >
+              <NavDropdown.Item as={Link} to="/landing/about/visi-misi#contact">
                 Contact
               </NavDropdown.Item>
-
             </NavDropdown>
 
             {/* PRODUCT */}
             <NavDropdown title="Product" id="product-dropdown">
-
               <NavDropdown.Item
                 as={Link}
-                to="/product#superiority"
+                to="/landing/product/Superiority#superiority"
               >
                 Superiority
               </NavDropdown.Item>
-
-              <NavDropdown.Item
-                as={Link}
-                to="/product#quality"
-              >
-                Quality
-              </NavDropdown.Item>
-
-              <NavDropdown.Item
-                as={Link}
-                to="/product#export"
-              >
-                Export Grade
-              </NavDropdown.Item>
-
             </NavDropdown>
-
             {/* COOPERATION */}
             <Nav.Link as={Link} to="/cooperation#partner">
               Cooperation
             </Nav.Link>
-
           </Nav>
         </Navbar.Collapse>
-
       </Container>
     </Navbar>
   );
