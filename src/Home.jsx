@@ -1,37 +1,56 @@
 import React from "react";
-import {Routes, Route} from "react-router-dom"
+import { Helmet } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
+
 import Layout from "./components/layout";
 import LandingPage from "./landing/LandingPage";
 import CertificateCarousel from "./components/CertificateCarousel";
 import CallToAction from "./components/CallToAction";
 
-
-//routes navigation router
-
-
 const Home = () => {
   return (
     <Layout>
+      {/* SEO */}
+      <Helmet>
+        <title>Briquette Nusantara – Sustainable Briquette Manufacturer</title>
+        <meta
+          name="description"
+          content="Briquette Nusantara adalah produsen briket kelapa berkualitas ekspor yang ramah lingkungan. Menghadirkan solusi energi bersih untuk kebutuhan internasional."
+        />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Briquette Nusantara" />
+        <meta
+          property="og:description"
+          content="Produsen briket kelapa ramah lingkungan berkualitas ekspor."
+        />
+        <meta property="og:image" content="/logo/briquette-logo.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://briquette-nusantara.vercel.app"
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
 
       {/* Landing Section */}
       <section
-  id="landing"
-  style={{ 
-    backgroundColor: "#FFF5EE",
-    minHeight: "100vh",
-    display: "flex",
-    alignItems: "center"
-  }}
->
-  <LandingPage />
-</section>
-
+        id="landing"
+        style={{
+          backgroundColor: "#FFF5EE",
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <LandingPage />
+      </section>
 
       {/* About Us Section */}
       <section id="about" className="py-5">
         <Container>
-
           <Row className="justify-content-center text-center">
             <Col md={8} lg={6}>
               <h2 className="mb-4">About Our Company</h2>
@@ -56,7 +75,6 @@ const Home = () => {
               </p>
             </Col>
           </Row>
-
         </Container>
       </section>
 
@@ -75,7 +93,6 @@ const Home = () => {
       <section>
         <CallToAction />
       </section>
-
     </Layout>
   );
 };
