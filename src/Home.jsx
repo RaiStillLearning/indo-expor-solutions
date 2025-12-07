@@ -5,6 +5,7 @@ import Layout from "./components/layout";
 import LandingPage from "./landing/LandingPage";
 import CertificateCarousel from "./components/CertificateCarousel";
 import CallToAction from "./components/CallToAction";
+import SEO from "./components/SEO";
 
 const Home = () => {
   return (
