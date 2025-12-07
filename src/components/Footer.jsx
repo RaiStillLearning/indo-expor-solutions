@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Phone, Mail, Instagram, MapPin } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 const containerStyle = {
   width: "100%",
@@ -35,12 +35,15 @@ export default function Footer() {
               style={{ height: "120px", marginBottom: "15px" }}
             />
 
-            <LoadScript googleMapsApiKey="AIzaSyDmW2q9WTmBAM9sCEDdEMju0PPNe0CH0Bg">
+            <LoadScript googleMapsApiKey="AIzaSyACz33X9_qt_KZ5-ehvGiq9cEWxLzJ6o0o">
               <GoogleMap
                 mapContainerStyle={containerStyle}
                 center={center}
                 zoom={14}
-              />
+              >
+                {/* Marker merah */}
+                <Marker position={center} />
+              </GoogleMap>
             </LoadScript>
           </Col>
 
