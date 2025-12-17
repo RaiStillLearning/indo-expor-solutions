@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://briquette-nusantara.vercel.app/</loc>
+    <loc>https://indoexporsolutions.vercel.app/</loc>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://briquette-nusantara.vercel.app/landing/about/visi-misi</loc>
+    <loc>https://indoexporsolutions.vercel.app/landing/about/visi-misi</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://briquette-nusantara.vercel.app/landing/product/Superiority</loc>
+    <loc>https://indoexporsolutions.vercel.app/landing/product/Superiority</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://briquette-nusantara.vercel.app/cooperation</loc>
+    <loc>https://indoexporsolutions.vercel.app/cooperation</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 

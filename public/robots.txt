@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://briquette-nusantara.vercel.app/sitemap.xml
+Sitemap: https://indoexporsolutions.vercel.app/sitemap.xml

@@ -21,7 +21,7 @@ const LandingPage = () => {
           marginBottom: "0",
         }}
       >
-        <b>BRIQUETTE</b>
+        <b>INDO EXPOR</b>
       </h1>
 
       <h1
@@ -32,7 +32,7 @@ const LandingPage = () => {
           marginBottom: "10px",
         }}
       >
-        <b>NUSANTARA</b>
+        <b>SOLUTIONS</b>
       </h1>
 
       <p

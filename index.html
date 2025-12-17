@@ -1,22 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
+    <!-- BASIC -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
 
+    <!-- TITLE & DESCRIPTION -->
+    <title>Indo Expor Solutions – Supplier & Exporter Indonesia</title>
+    <meta
+      name="description"
+      content="Indo Expor Solutions adalah supplier dan eksportir produk Indonesia berkualitas untuk pasar global."
+    />
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://indoexporsolutions.vercel.app/" />
+
+    <!-- ROBOTS -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- OPEN GRAPH -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:title" content="Indo Expor Solutions" />
+    <meta property="og:description" content="Supplier & Exporter Indonesia untuk pasar global." />
+    <meta property="og:url" content="https://indoexporsolutions.vercel.app/" />
     <meta property="og:image" content="/logo/briquette-logo.png" />
 
+    <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
 
-    <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <!-- FAVICON -->
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>briquette-nusantara</title>
+
+    <!-- LOCAL BUSINESS SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Indo Expor Solutions",
+      "url": "https://indoexporsolutions.vercel.app",
+      "logo": "https://indoexporsolutions.vercel.app/logo/briquette-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62-896-5698-3498",
+        "contactType": "customer service"
+      }
+    }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

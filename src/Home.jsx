@@ -12,10 +12,10 @@ const Home = () => {
     <Layout>
       {/* SEO */}
       <SEO
-        title="Briquette Nusantara – Sustainable Briquette Manufacturer"
-        description="Briquette Nusantara adalah produsen briket kelapa berkualitas ekspor yang ramah lingkungan. Menghadirkan solusi energi bersih untuk kebutuhan internasional."
+        title="Indo Expor Solutions – Sustainable Briquette Manufacturer"
+        description="Indo Expor Solutions adalah produsen briket kelapa berkualitas ekspor yang ramah lingkungan. Menghadirkan solusi energi bersih untuk kebutuhan internasional."
         image="/logo/briquette-logo.png"
-        url="https://briquette-nusantara.vercel.app/"
+        url="https://indoexporsolutions.vercel.app/"
       />
 
       {/* Landing Section */}

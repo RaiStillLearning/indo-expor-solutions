@@ -35,7 +35,7 @@ export default function Footer() {
               style={{ height: "120px", marginBottom: "15px" }}
             />
 
-            <LoadScript googleMapsApiKey="AIzaSyACz33X9_qt_KZ5-ehvGiq9cEWxLzJ6o0o">
+            <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAP_API}>
               <GoogleMap
                 mapContainerStyle={containerStyle}
                 center={center}
