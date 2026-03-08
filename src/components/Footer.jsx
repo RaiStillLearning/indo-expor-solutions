@@ -42,19 +42,6 @@ export default function Footer() {
                 }}
                 loading="lazy"
               />
-
-              {/* overlay arrow */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: "45%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  fontSize: "28px",
-                }}
-              >
-                📍
-              </div>
             </div>
 
             {/* link buka Google Maps */}
