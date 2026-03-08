@@ -2,13 +2,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Phone, Mail, Instagram, MapPin } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-
-const containerStyle = {
-  width: "100%",
-  height: "200px",
-  borderRadius: "8px",
-};
 
 const center = {
   lat: -6.391702,
@@ -16,6 +9,9 @@ const center = {
 };
 
 export default function Footer() {
+  const mapUrl = `https://maps.google.com/maps?q=${center.lat},${center.lng}&z=16&output=embed`;
+  const mapsLink = `https://www.google.com/maps?q=${center.lat},${center.lng}`;
+
   return (
     <footer
       style={{
@@ -35,19 +31,50 @@ export default function Footer() {
               style={{ height: "120px", marginBottom: "15px" }}
             />
 
-            <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAP_API}>
-              <GoogleMap
-                mapContainerStyle={containerStyle}
-                center={center}
-                zoom={14}
+            <div style={{ position: "relative" }}>
+              <iframe
+                src={mapUrl}
+                width="100%"
+                height="200"
+                style={{
+                  border: 0,
+                  borderRadius: "8px",
+                }}
+                loading="lazy"
+              />
+
+              {/* overlay arrow */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: "45%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  fontSize: "28px",
+                }}
               >
-                {/* Marker merah */}
-                <Marker position={center} />
-              </GoogleMap>
-            </LoadScript>
+                📍
+              </div>
+            </div>
+
+            {/* link buka Google Maps */}
+            <div style={{ marginTop: "8px" }}>
+              <a
+                href={mapsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  fontSize: "14px",
+                  color: "#c00",
+                  textDecoration: "none",
+                }}
+              >
+                Open in Google Maps
+              </a>
+            </div>
           </Col>
 
-          {/* QUICK LINKS (mengikuti Navbar) */}
+          {/* QUICK LINKS */}
           <Col md={4} className="mb-4 mb-md-0">
             <h6 style={{ fontWeight: "600", marginBottom: "15px" }}>
               quick link
@@ -68,6 +95,7 @@ export default function Footer() {
               </li>
 
               <li style={{ marginTop: "10px", fontWeight: "600" }}>About Us</li>
+
               <ul style={{ listStyle: "none", paddingLeft: "15px" }}>
                 <li>
                   <Link
@@ -77,6 +105,7 @@ export default function Footer() {
                     About Company
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     to="/landing/about/visi-misi#visimisi"
@@ -85,6 +114,7 @@ export default function Footer() {
                     Vision & Mission
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     to="/landing/about/visi-misi#ourteam"
@@ -93,6 +123,7 @@ export default function Footer() {
                     Our Team
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     to="/landing/about/visi-misi#contact"
@@ -104,6 +135,7 @@ export default function Footer() {
               </ul>
 
               <li style={{ marginTop: "10px", fontWeight: "600" }}>Product</li>
+
               <ul style={{ listStyle: "none", paddingLeft: "15px" }}>
                 <li>
                   <Link
@@ -126,7 +158,7 @@ export default function Footer() {
             </ul>
           </Col>
 
-          {/* CONTACT US */}
+          {/* CONTACT */}
           <Col md={4}>
             <h6 style={{ fontWeight: "600", marginBottom: "15px" }}>
               contact us
@@ -166,7 +198,7 @@ export default function Footer() {
 
         <div className="text-center">
           <p style={{ color: "#777", fontSize: "14px", margin: 0 }}>
-            © 2025 BriquetteNusantara. All rights reserved.
+            © 2025 Indo Expor Solutions. All rights reserved.
           </p>
         </div>
       </Container>
